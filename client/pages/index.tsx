@@ -8,6 +8,7 @@ import {
   BiDotsHorizontalRounded,
 } from "react-icons/bi";
 import {Inter} from 'next/font/google'
+import FeedCard from "@/components/FeedCard";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -81,7 +82,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 border-r-[1px]  border-l-[1px] border-">
-          sd
+          <FeedCard/>
         </div>
         <div className="col-span-3">sd</div>
       </div>
