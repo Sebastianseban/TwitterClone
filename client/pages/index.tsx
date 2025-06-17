@@ -7,12 +7,10 @@ import {
   BiListUl,
   BiDotsHorizontalRounded,
 } from "react-icons/bi";
-import {Inter} from 'next/font/google'
+
 import FeedCard from "@/components/FeedCard";
 
-const inter = Inter({
-  subsets: ['latin'],
-});
+
 
 interface TwitterSideBarButton {
   title: string;
@@ -56,13 +54,13 @@ const sideBarMenuItems: TwitterSideBarButton[] = [
 
 export default function Home() {
   return (
-    <div className={inter.className}>
+    <div >
       <div className="h-screen w-screen grid grid-cols-12 px-56">
-        <div className="col-span-3  pt-8">
-          <div className="text-4xl w-fit h-fit hover:bg-gray-800 rounded-full p-2 cursor-pointer transition-all">
+        <div className="col-span-3  pt-1 ml-8">
+          <div className="text-2xl w-fit h-fit hover:bg-gray-800 rounded-full p-2 cursor-pointer transition-all">
             <FaTwitter />
           </div>
-          <div className="mt-4 text-2xl font-semibold pr-4 py-4">
+          <div className="mt-4 text-xl font-semibold pr-4 py-4">
             <ul>
               {sideBarMenuItems.map((item) => (
                 <li
@@ -81,7 +79,16 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="col-span-6 border-r-[1px]  border-l-[1px] border-">
+        <div className="col-span-5 border h-screen overflow-scroll border-gray-600 ">
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
           <FeedCard/>
         </div>
         <div className="col-span-3">sd</div>
